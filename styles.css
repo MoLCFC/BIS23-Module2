@@ -1,11 +1,11 @@
-/* Global Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
   
-  /* Header Styles */
+
   header {
     background-color: #222;
     color: #fff;
@@ -13,7 +13,7 @@ body {
     text-align: center;
   }
   
-  /* Navigation Menu Styles */
+ 
   nav {
     background-color: #333;
     overflow: hidden;
@@ -38,12 +38,12 @@ body {
     text-decoration: none;
   }
   
-  /* Rollover Effects */
+
   .menu > li > a:hover {
     background-color: #111;
   }
   
-  /* Dropdown (Flyout) Styles */
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -68,19 +68,19 @@ body {
     background-color: #555;
   }
   
-  /* Show dropdown on hover */
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
   
-  /* Clear Floats */
+
   nav:after {
     content: "";
     display: table;
     clear: both;
   }
   
-  /* Footer Styles */
+
   footer {
     background-color: #111;
     color: #fff;
