@@ -2,173 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My First Html</title>
-  <style>
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgb(0, 0, 0); 
-      margin: 0;
-      padding: 0;
-      color: white; 
-      cursor: none; 
-    }
-    
-  
-    .cursor {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border: 2px solid rgb(255, 255, 255); 
-      border-radius: 50%;
-      pointer-events: none; 
-      transform: translate(-50%, -50%);
-      transition: transform 0.15s ease, border-color 0.15s ease;
-      z-index: 1000;
-    }
-
-    
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #000000;
-    }
-
-
-    header h1 {
-      font-size: 2em;
-      color: white;
-    }
-
-
-    #logo {
-      width: 150px;
-      margin-top: 10px;
-    }
-    
-    
-    .intro {
-      text-align: center;
-      font-size: 1.2em;
-      margin: 20px;
-    }
-    
-   
-    .bio {
-      background-color: rgba(30, 30, 30, 0.9);
-      margin: 20px auto;
-      padding: 20px;
-      width: 80%;
-      max-width: 800px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    }
-    
-    .bio h2 {
-      color: white;
-    }
-    
-  
-    img.rollover {
-      display: block;
-      margin: 20px auto;
-      width: 300px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-
-    img.rollover:hover {
-      transform: scale(1.1);
-      opacity: 0.9;
-    }
-    
-   
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-
-
-    footer nav a {
-      color: #ffa500;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 1em;
-    }
-
-
-    footer nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Ajerli LLC - Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  <div class="cursor" id="cursor"></div>
-
-  
   <header>
-    <h1>Welcome to My Page</h1>
-    <img src="ConfirmedLogo.svg" alt="My Logo" id="logo">
-  </header>
-  
-  
-  <section class="intro">
-    <p>
-      Hello! I'm Mahmood Gheith, a passionate software and data engineer dedicated to creating innovative and impactful digital solutions. This page is a brief introduction to who I am and what I do.
-    </p>
-
-  </section>
-  
-  
-  <section class="bio">
-    <h2>About Me</h2>
-    <p>
-      With a strong foundation in software development, data integration, and cloud computing, I’ve been building dynamic applications and data-driven platforms that merge functionality with creativity. I enjoy leveraging cutting-edge technologies like React, Python, SQL, and cloud platforms like Azure and GCP to develop efficient, scalable solutions. Whether it's enhancing user experiences with seamless interfaces or optimizing backend systems for peak performance, I thrive on bringing ideas to life through code. My work often blends clean design principles with advanced analytics and machine learning to deliver applications that are not only powerful but also user-friendly.
-    </p>
-   
-  </section>
-  
-  
-  <footer>
-    <p>&copy; All Rights Reserved 2004</p>
+    <h1>Welcome to Ajerli LLC</h1>
+    <!-- Navigation Menu -->
     <nav>
-      <a href="#home">Home</a> |
-      <a href="#about">About</a> |
-      <a href="#contact">Contact</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="car_rental.html">Car Rental</a>
+          <ul class="dropdown-content">
+            <li><a href="browse_rentals.html">Browse Rentals</a></li>
+            <li><a href="how_it_works.html">How It Works</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="car_market.html">Car Market</a>
+          <ul class="dropdown-content">
+            <li><a href="browse_cars.html">Browse Cars</a></li>
+            <li><a href="sell_your_car.html">Sell Your Car</a></li>
+            <li><a href="dealer_listings.html">Dealer Listings</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="ecommerce.html">E-Commerce</a>
+          <ul class="dropdown-content">
+            <li><a href="sales.html">Sales</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
+  </header>
+
+  <!-- Page content goes here -->
+  <section>
+    <p>Welcome to the Ajerli LLC website, your one-stop destination for car rentals and used car sales.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Ajerli LLC</p>
   </footer>
-  
-  
-  <script>
-    
-    const cursor = document.getElementById('cursor');
-
-    
-    document.addEventListener('mousemove', function(e) {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-
-    
-    const links = document.querySelectorAll('a');
-    links.forEach(link => {
-      link.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursor.style.borderColor = '#ffa500';
-      });
-      link.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.borderColor = 'white';
-      });
-    });
-  </script>
 </body>
 </html>
